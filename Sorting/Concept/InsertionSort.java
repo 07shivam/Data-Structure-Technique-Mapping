@@ -1,6 +1,10 @@
 // Video Link: https://www.youtube.com/watch?v=3GC83dh4cf0
 
-/*	Consider {12, 11, 13, 5, 6}
+/*
+Insertion Sort is an elementary sorting algorithm that builds the final sorted array one item at a time.
+It takes each element from the list and inserts it into its correct position in the already sorted part of the array.
+
+Consider {12, 11, 13, 5, 6}
 
 Loop for i = 1 (second element of the array) to 5 (size of the array)
 
@@ -31,26 +35,25 @@ import java.util.Scanner;
 import Core.PrintHelper;
 
 public class InsertionSort {
-    
+
     // Main logic of Insertion Sort
     private static void insertionSort(int[] arr) {
         int n = arr.length;
 
-        for(int i=1; i< n; i++) //assume 1st element is sorted, that is arr[0]
+        for (int i = 1; i < n; i++) // assume 1st element is sorted, that is arr[0]
         {
             int current = arr[i];
-            int j = i-1;
+            int j = i - 1;
 
-        // Move elements of arr[0..i-1], that are
-        // greater than key, to one position ahead
-        // of their current position
-            while(j >= 0 && arr[j] > current)
-            {
-                arr[j+1] = arr[j];
+            // Move elements of arr[0..i-1], that are
+            // greater than key, to one position ahead
+            // of their current position
+            while (j >= 0 && arr[j] > current) {
+                arr[j + 1] = arr[j];
                 j--;
             }
 
-            arr[j+1] = current; //finally placing the current element in it's position
+            arr[j + 1] = current; // finally placing the current element in it's position
         }
 
     }
