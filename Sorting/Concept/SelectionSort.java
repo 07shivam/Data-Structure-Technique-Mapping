@@ -11,6 +11,22 @@ a) Find the minimum element of array from 0 to n-1 and swap it with 0th element.
 b) Find the minimum element of array from 1 to n-1 and swap it with 1st element.
 c) Find the minimum element of array from 2 to n-1 and swap it with 2nd element and so on.
 
+function selectionSort(arr):
+         for i from 0 to arr.length - 1:
+        // Assume the first unsorted element is the minimum
+        minIndex = i
+        
+        // Find the smallest element in the unsorted section
+        for j from i + 1 to arr.length - 1:
+            if arr[j] < arr[minIndex]:
+                minIndex = j
+        
+        // Swap the found minimum element with the first unsorted element
+        if minIndex != i:
+            temp = arr[i]
+            arr[i] = arr[minIndex]
+            arr[minIndex] = temp
+            
 O(n^2) Time Complexity. */
 
 import java.util.Scanner;

@@ -44,6 +44,7 @@ Pivot : 80
 
  */
 
+ import java.util.Arrays;
  import java.util.Scanner;
  import Core.PrintHelper;
 import Core.SwapHelper;
@@ -63,6 +64,48 @@ import Core.SwapHelper;
         }
     
      }
+
+     private static void quickSort2(int[] arr) {
+        if (arr.length > 1) {
+            int pivot_index = partition(arr, 0, arr.length-1); //getting the pivot index, where we have parition the arr according to pivot value.
+
+            int[] left = Arrays.copyOfRange(arr, 0, pivot_index);
+            int[] right = Arrays.copyOfRange(arr, pivot_index+1, arr.length);
+
+            System.out.print("left = ");
+            PrintHelper.printArray(left);
+            System.out.print("right = ");
+            PrintHelper.printArray(right);
+
+            quickSort2(left);
+            quickSort2(right);
+
+            mergeArray(arr, left, arr[pivot_index], right);
+
+            System.out.print("merge = ");
+            PrintHelper.printArray(arr);
+
+        }
+     }
+
+     private static void mergeArray(int[] arr, int[] left, int pivot, int[] right) {
+        int index = 0;
+    
+        // Copy left subarray
+        for (int num : left) {
+            arr[index++] = num;
+        }
+    
+        // Place pivot in its correct position
+        arr[index++] = pivot;
+    
+        // Copy right subarray
+        for (int num : right) {
+            arr[index++] = num;
+        }
+    }
+
+
  
      // Merge function to merge two sorted arrays into one
      private static int partition(int[] arr, int low, int high) {
@@ -97,6 +140,7 @@ import Core.SwapHelper;
          }
  
          quickSort(arr, 0, arr.length-1);
+         quickSort2(arr);
          PrintHelper.printArray(arr);
          scanner.close();
      }
