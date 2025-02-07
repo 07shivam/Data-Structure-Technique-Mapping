@@ -14,13 +14,12 @@ arr = {0,2,1,2,0,0,1} , so your answer should be {0,0,0,1,1,2,2}
 
  */
 
+package Sorting.Technique_Saga;
 
-package Sorting.MindMap;
 import java.util.Arrays;
 
-public class SortColors {
-    
-    public static void sortColors(int[] colors) {
+public class SortColours {
+     public static void sortColors(int[] colors) {
         int low = 0, mid = 0, high = colors.length - 1;
 
         while (mid <= high) {

@@ -24,32 +24,32 @@ By first sorting the intervals by their start times, we can check for overlaps w
  Once sorted, any overlap will be evident if the start time of a meeting is earlier than the end time of the previous meeting.
  */
 
-package Sorting.MindMap;
+package Sorting.Technique_Saga;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MeetingRoom {
-    public int start;
+public class MeetingRoom1 {
+     public int start;
     int end;
 
-    public MeetingRoom(int start, int end) {
+    public MeetingRoom1(int start, int end) {
         this.start = start;
         this.end = end;
     }
 
-    public static int compaMeetingRoom(MeetingRoom m1, MeetingRoom m2) {
+    public static int compaMeetingRoom(MeetingRoom1 m1, MeetingRoom1 m2) {
         return Integer.compare(m1.start, m2.start); // returns -1, 0, or 1
     }
 
     public static void main(String[] args) {
-        List<MeetingRoom> intervals = new ArrayList<>();
-        intervals.add(new MeetingRoom(3, 5));
-        intervals.add(new MeetingRoom(1, 4));
-        intervals.add(new MeetingRoom(2, 6));
+        List<MeetingRoom1> intervals = new ArrayList<>();
+        intervals.add(new MeetingRoom1(3, 5));
+        intervals.add(new MeetingRoom1(1, 4));
+        intervals.add(new MeetingRoom1(2, 6));
 
         System.out.println("Before Sorting:");
-        for (MeetingRoom interval : intervals) {
+        for (MeetingRoom1 interval : intervals) {
             System.out.println(interval.start + "  " + interval.end);
         }
 
@@ -59,10 +59,10 @@ public class MeetingRoom {
 
         // intervals.sort(Comparator.comparingInt(i -> i.start));
         // intervals.sort(CustomSort::sortTwoArray);
-        intervals.sort(MeetingRoom::compaMeetingRoom);
+        intervals.sort(MeetingRoom1::compaMeetingRoom);
 
         System.out.println("\nAfter Sorting:");
-        for (MeetingRoom interval : intervals) {
+        for (MeetingRoom1 interval : intervals) {
             System.out.println(interval.start + "  " + interval.end);
         }
 
