@@ -1,0 +1,87 @@
+This 60-second Post Will Save You at least 15 Hours of Reading on System Design Interviews
+
+Here’s how a typical system design interview happens (from a real conversation)
+
+ 1. Handling Millions of Requests per Second 
+
+Interviewer: “Your system needs to handle millions of requests per second. What’s your approach?” 
+
+You: I’ll start with a load balancer to evenly distribute traffic across multiple application servers and I will also use a Reverse Proxy like NGINX or AWS ALB for added routing intelligence. 
+
+
+ 2. Server Failures and High Availability 
+
+Interviewer: “What happens if a server goes down?” 
+
+You: I’d replicate data across multiple servers and set up a heartbeat mechanism to detect failures. Failed servers are replaced using auto-scaling in cloud services. 
+
+
+ 3. Scaling for Traffic Spikes 
+
+Interviewer: “What if traffic spikes overnight?” 
+
+You: Horizontal scaling, I’d add more servers dynamically behind the load balancer using auto-scaling groups or Kubernetes clusters. 
+
+I will also use caching layers like Redis or Memcached to reduce backend load. 
+
+ 4. Storing Large Volumes of Data 
+
+Interviewer: “How would you store terabytes or petabytes of data?” 
+
+You: I’d shard the database and distribute data across multiple nodes using techniques like consistent hashing to avoid data imbalance. 
+
+ 5. Ensuring Data Durability 
+
+Interviewer: “How do you ensure no data is lost?” 
+
+You: Replication, I’d keep multiple copies of data using a Primary-Replica setup or a Leaderless Replication model. For mission-critical systems, multi-region replication ensures disaster recovery. 
+
+
+ 6. Dealing with Write Performance Issues 
+
+Interviewer: “Won’t replication slow down writes?” 
+
+You: It depends on whether we prioritize strong consistency or eventual consistency. 
+- For strong consistency, wait until writes propagate to all replicas before returning success. 
+- For high write throughput, go with eventual consistency like DynamoDB or Cassandra. 
+
+ 7. Conflict Resolution in Distributed Systems 
+
+Interviewer: “How do you handle conflicting writes in distributed databases?” 
+
+You: Use techniques like vector clocks or timestamps to track versions of data. Conflicts can be resolved during reads using application logic. 
+
+ 8. Write-Heavy Use Cases
+Interviewer: “When would you use leaderless replication?” 
+
+You: Leaderless systems like Cassandra are great for high-write use cases, where speed matters more than consistency—e.g., logging systems or IoT data collection. 
+
+
+Interviewer: How would you optimize the performance of the web application ?
+
+1. Minimize HTTP requests by bundling and minifying assets (CSS, JS).
+ - https://lnkd.in/dcfVvsm7.
+
+2. Implement lazy loading for images and non-critical resources.
+ - https://lnkd.in/dKwX7ZEv
+
+3. Use caching techniques (browser caching, server-side caching) to reduce server load.
+ - https://lnkd.in/dzai8n_E
+
+4. Optimize database queries with proper indexing and efficient querying techniques.
+ - https://lnkd.in/dDsAh3TN
+ - https://lnkd.in/dj72R72i
+
+5. Compress and optimize images to reduce file size without losing quality.
+ 
+6. Implement pagination or infinite scrolling for large datasets.
+ - https://lnkd.in/dfe4ac3c.
+
+7. Use a Content Delivery Network (CDN) to serve static assets from geographically distributed servers.
+
+8. Minimize the use of blocking JavaScript and prioritize asynchronous operations.
+ - https://lnkd.in/d5ciJBYX
+
+9. Implement server-side rendering (SSR) for improved initial page load times.
+ - https://lnkd.in/db2MmEDx
+ - https://lnkd.in/ditJfpnU
