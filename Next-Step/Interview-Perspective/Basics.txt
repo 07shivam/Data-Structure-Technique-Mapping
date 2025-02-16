@@ -1,0 +1,54 @@
+1 .Abstract Class vs Interface in C#
+
+ Abstract method to be implemented in derived classes
+
+Key Differences Explained
+1️⃣ Method Implementation
+Abstract classes can have both implemented and abstract methods.
+Interfaces (before C# 8) could only declare methods (no implementation), but C# 8+ allows default implementations.
+2️⃣ Fields (Instance Variables)
+Abstract classes can have fields (variables with values).
+Interfaces cannot have fields (before C# 8). They only have properties (get/set).
+3️⃣ Multiple Inheritance
+A class can inherit only one abstract class (C# does not support multiple inheritance).
+A class can implement multiple interfaces (which helps with flexibility).
+
+Real-Life Example: Payment System (E-commerce)
+Scenario:
+We have an abstract class for online payments, which provides common logic, and an interface for additional security.
+
+1️⃣ Using Abstract Class (Common Payment Logic)
+csharp
+Copy
+Edit
+// Abstract class for Payment
+public abstract class Payment
+{
+    public string TransactionId { get; set; }
+
+    public Payment()
+    {
+        TransactionId = Guid.NewGuid().ToString();
+    }
+
+    // Abstract method to be implemented in derived classes
+    public abstract void ProcessPayment(decimal amount);
+
+    // Concrete method (shared by all payment methods)
+    public void ShowTransaction()
+    {
+        Console.WriteLine($"Transaction ID: {TransactionId}");
+    }
+}
+
+// Concrete class implementing Payment
+public class CreditCardPayment : Payment
+{
+    public override void ProcessPayment(decimal amount)
+    {
+        Console.WriteLine($"Processing credit card payment of {amount}.");
+    }
+}
+
+
+2.Concrete class And Method: implementing Payment
