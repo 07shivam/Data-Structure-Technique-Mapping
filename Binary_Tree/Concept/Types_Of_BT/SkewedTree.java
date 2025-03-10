@@ -1,3 +1,10 @@
+/*
+A Skewed Binary Tree is a tree where all nodes have only one child (either left or right).
+It looks like a linked list rather than a balanced tree.
+
+ Blog Link : Link : https://www.enjoyalgorithms.com/blog/introduction-to-binary-tree 
+ */
+
 package Binary_Tree.Concept;
 
 import java.util.LinkedList;

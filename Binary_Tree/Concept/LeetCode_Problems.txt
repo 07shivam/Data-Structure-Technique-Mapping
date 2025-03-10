@@ -1,0 +1,8 @@
+1.Find Largest Value in Each Tree Row
+Link : https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/ 
+
+2. Search in a Binary Search Tree
+Link : https://leetcode.com/problems/search-in-a-binary-search-tree/description/
+
+3.Second Minimum Node In a Binary Tree
+Link : https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/description/

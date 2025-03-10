@@ -1,0 +1,94 @@
+Binary Tree
+-A Binary Tree is a hierarchical data structure consisting of nodes, each of which has at most two children.
+-It does not necessarily have the properties of a BST.
+
+Link : https://www.enjoyalgorithms.com/blog/introduction-to-binary-tree 
+
+
+Types of Binary Trees 🌲
+
+Binary trees are classified based on the number of children each node has and their arrangement. Below are the most common types:
+
+1️ .Full Binary Tree
+🔹 Definition: Every node in the tree has either 0 or 2 children.
+🔹 Example:
+
+        1
+       / \
+      2   3
+     / \   \
+    4   5   6
+🔹 Characteristics:
+
+No node has exactly one child.
+Leaf nodes appear only at the last level.
+
+
+2️ .Perfect Binary Tree
+🔹 Definition: Every internal node has exactly 2 children, and all leaf nodes are at the same level.
+🔹 Example:
+
+        1
+       / \
+      2   3
+     / \  / \
+    4   5 6  7
+🔹 Characteristics:
+
+A tree with height h has exactly 2^h - 1 nodes.
+
+
+3️ .Complete Binary Tree
+🔹 Definition: All levels are completely filled except possibly the last, which is filled from left to right.
+🔹 Example:
+
+        1
+       / \
+      2   3
+     / \  /
+    4   5 6
+🔹 Characteristics:
+
+If a node has children, they must be placed from left to right.
+Used in heap implementations.
+
+
+4️ .Balanced Binary Tree
+🔹 Definition: A binary tree where the height difference between left and right subtrees is at most 1 for every node.
+🔹 Example:
+
+        1
+       / \
+      2   3
+     / \
+    4   5
+🔹 Characteristics:
+
+The height of the tree is log(N), making operations efficient.
+Used in AVL Trees, Red-Black Trees.
+
+
+5️ .Skewed Binary Tree
+🔹 Definition: A tree where all nodes have only one child (either left or right).
+🔹 Types: 1️⃣ Left Skewed Tree: All nodes have only left children.
+
+        1
+       /
+      2
+     /
+    3
+   /
+  4
+
+
+6️ .Degenerate (Pathological) Tree
+🔹 Definition: A tree where each parent has only one child, making it similar to a linked list.
+
+  1
+   \
+    2
+     \
+      3
+       \
+        4
+

@@ -1,3 +1,11 @@
+/*
+A Complete Binary Tree (CBT) is a binary tree in which:
+
+- All levels are completely filled, except possibly the last level.
+- In the last level, nodes are filled from left to right without any gaps.
+
+ Blog Link : Link : https://www.enjoyalgorithms.com/blog/introduction-to-binary-tree 
+ */
 package Binary_Tree.Concept;
 
 import java.util.LinkedList;

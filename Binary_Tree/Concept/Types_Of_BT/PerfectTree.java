@@ -4,6 +4,7 @@ A perfect binary tree is a tree in which:
 1. All internal nodes have exactly two children.
 2. All leaf nodes are at the same depth (or level).
 
+ Blog Link : Link : https://www.enjoyalgorithms.com/blog/introduction-to-binary-tree 
  */
 
 package Binary_Tree.Concept;
