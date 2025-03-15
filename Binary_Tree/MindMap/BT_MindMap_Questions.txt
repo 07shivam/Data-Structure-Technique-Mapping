@@ -1,0 +1,14 @@
+binary tree
+A tree data structure in which each node has at most two children.
+
+1. Root equals sum of children
+
+2. Increasing order search tree
+Link : https://leetcode.com/problems/increasing-order-search-tree/submissions/1574860064/ 
+
+3. Binary tree postorder traversal
+
+4. Binary tree preorder traversal
+Link : https://leetcode.com/problems/binary-tree-postorder-traversal/
+
+5. Binary tree tilt
