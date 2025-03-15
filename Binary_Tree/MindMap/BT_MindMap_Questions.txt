@@ -11,4 +11,25 @@ Link : https://leetcode.com/problems/increasing-order-search-tree/submissions/15
 4. Binary tree preorder traversal
 Link : https://leetcode.com/problems/binary-tree-postorder-traversal/
 
-5. Binary tree tilt
+*5. Binary tree tilt
+Link : https://leetcode.com/problems/binary-tree-tilt/description/
+
+
+I. Insertion in a Binary Tree (BT)
+1. Perform Level Order Traversal (LOT)
+-Traverse the tree level by level using a queue.
+
+2. Find the First Vacant Position
+-If a node does not have a left child, insert the new node there.
+-If the left child is occupied, check the right child.
+-Insert the new node at the first available position (left first, then right).
+
+3.Create a New Node and Insert It
+-Allocate memory for the new node and assign the given value.
+-Attach it to the first available position found in step 2.
+
+Important Note:
+❌ Depth-First Traversals (DFT) will not work here!
+
+Preorder, Inorder, and Postorder traversals do not guarantee finding the first vacant position efficiently.
+Only Level Order Traversal (LOT) ensures correct insertion in a binary tree.
