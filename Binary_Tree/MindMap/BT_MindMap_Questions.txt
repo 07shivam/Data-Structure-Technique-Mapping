@@ -33,3 +33,44 @@ Important Note:
 
 Preorder, Inorder, and Postorder traversals do not guarantee finding the first vacant position efficiently.
 Only Level Order Traversal (LOT) ensures correct insertion in a binary tree.
+
+
+II. Deleting a Node in a Binary Tree (BT)
+
+-Since a Binary Tree does not follow an ordering property, deletion is done as follows:
+
+1. Find the node to be deleted.
+2. Replace it with the deepest rightmost node in the tree.
+3. Delete the deepest rightmost node.
+
+II. Deleting a Node in a Binary Search Tree (BST)
+In a BST, deletion follows these rules:
+
+1. If the node has no children, remove it directly.
+2. If the node has one child, replace it with its child.
+3. If the node has two children, find the inorder successor (smallest node in right subtree) and replace the node with it.
+
+
+III. Printing Corner Nodes in a Binary Tree and Binary Search Tree
+
+Approach:
+1. Perform Level Order Traversal (BFS) using a queue.
+2. Identify first and last node of each level, store them in a list
+3. Print the first and last nodes for each level.
+
+*IV. Print Max Width Of Tree
+
+Approach : 
+1. Find Max Width at each level
+
+V. Find Sum of leaf nodes at min level
+
+Approach : 
+1. Use a Queue (BFS) for Level Order Traversal.
+2. Traverse each level:
+3. Maintain a sum variable for leaf nodes at the level.
+4. If a node is a leaf node, add it to the sum.
+5. Stop immediately once we find a level with leaf nodes.
+6. Return the sum of leaf nodes at the first found level.
+
+VI. Reverse Orde Traversal

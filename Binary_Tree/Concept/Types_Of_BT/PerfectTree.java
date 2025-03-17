@@ -7,7 +7,7 @@ A perfect binary tree is a tree in which:
  Blog Link : Link : https://www.enjoyalgorithms.com/blog/introduction-to-binary-tree 
  */
 
-package Binary_Tree.Concept;
+package Binary_Tree.Concept.Types_Of_BT;
 
 import java.util.LinkedList;
 import java.util.Queue;

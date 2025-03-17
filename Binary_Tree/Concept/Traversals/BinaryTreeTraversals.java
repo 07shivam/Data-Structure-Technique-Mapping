@@ -55,6 +55,54 @@ import Core.TreeNode;
 
 public class BinaryTreeTraversals {
 
+    public static void reverseLevelOrder(TreeNode root) {
+        if (root == null) return;
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+
+            stack.push(node); // Store nodes in stack for reverse order
+
+            // Push right child first, then left (so left comes first when popped)
+            if (node.right != null) queue.offer(node.right);
+            if (node.left != null) queue.offer(node.left);
+        }
+
+        // Print nodes from stack (bottom-to-top order)
+        while (!stack.isEmpty()) {
+            System.out.print(stack.pop().val + " ");
+        }
+    }
+
+    public static void reverseLevelOrderTraversal(TreeNode root) {
+
+        if (root == null)
+            return;
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            int levelSize = queue.size();
+
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode node = queue.poll();
+                System.out.print(node.val + " ");
+
+                if (node.right != null)
+                queue.offer(node.right);
+                if (node.left != null)
+                    queue.offer(node.left);
+
+            }
+        }
+    }
+
     public static void levelOrderTraversal(TreeNode root) {
 
         if (root == null)
@@ -191,5 +239,12 @@ public class BinaryTreeTraversals {
 
         System.out.println("\nLevel (Recursive): ");
         levelOrderTraversal(root);
+
+        System.out.println("\n reverseLevelOrder (Recursive): ");
+        reverseLevelOrder(root);
+        System.out.println("\n reverseLevelOrder (Recursive): ");
+
+        reverseLevelOrderTraversal(root);
+        
     }
 }

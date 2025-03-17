@@ -5,7 +5,7 @@
  */
  
 
-package Binary_Tree.Concept;
+package Binary_Tree.Concept.Types_Of_BT;
 import java.util.*;
 import Core.TreeNode; // Correctly importing TreeNode
 

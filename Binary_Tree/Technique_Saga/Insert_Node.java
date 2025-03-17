@@ -59,7 +59,7 @@ public class Insert_Node {
                 }
             } else {
                 if (current.right == null) {
-                    current.right = new TreeNode(val);
+                    current.right = new TreeNode(val); 
                     break;
                 } else {
                     current = current.right;
