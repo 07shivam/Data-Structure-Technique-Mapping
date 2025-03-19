@@ -47,13 +47,52 @@ Postorder: 5 11 12 10 20 25 15
  */
 package Binary_Tree.Concept.Traversals;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
 import Core.TreeNode;
 
 public class BinaryTreeTraversals {
+
+     public static void zigZag_Traversal(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+
+        if (root == null)
+            return ;
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        boolean toggle = true;
+        while (!queue.isEmpty()) {
+
+            int levelSize = queue.size();
+            List<Integer> level = new ArrayList<>();
+
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode node = queue.poll();
+                level.add(node.val);
+
+                if (node.left != null)
+                    queue.offer(node.left);
+                if (node.right != null)
+                    queue.offer(node.right);
+            }
+
+            if(!toggle)
+            {
+                Collections.reverse(level);
+            }
+
+            System.out.println(level);
+
+            result.add(level);
+            toggle =! toggle;
+        }
+    }
 
     public static void reverseLevelOrder(TreeNode root) {
         if (root == null) return;
