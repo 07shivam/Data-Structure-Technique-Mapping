@@ -1,0 +1,14 @@
+Binary Search Tree
+
+
+1. Range Sum of BST
+Link : https://leetcode.com/problems/range-sum-of-bst/description/ 
+
+2.  Search in a Binary Search Tree
+Link : https://leetcode.com/problems/search-in-a-binary-search-tree/description/
+
+3. Convert Sorted Array to Binary Search Tree
+Link : https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/
+
+4. Binary Search Tree to Greater Sum Tree
+Link : https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/description/
