@@ -27,8 +27,6 @@ true
  */
 package Assignment.Array;
 
-import java.util.*;
-
 public class SortPermutation {
 
     public static void main(String[] args) {
