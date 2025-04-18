@@ -1,9 +1,41 @@
 package Arrays.Two_Pointer;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Comparator;
+import java.util.HashMap;
 
 public class Two_Sum {
+
+    public int[] twoSumWithHasMap(int[] nums, int target)
+    {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        int k =0;
+        for(int num : nums)
+        {
+            map.put(num, k++);
+        }
+
+        Arrays.sort(nums);
+
+        int i = 0, j = nums.length - 1;
+        while (i < j) {
+            int sum = nums[i] + nums[j];
+            if (sum == target) {
+                
+                return new int[] { map.get(nums[i]), map.get(nums[j]) }; // return original indices
+
+            } else if (sum < target) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+
+        return new int[] {};
+    }
+
     public int[] twoSum(int[] nums, int target) {
 
         int n = nums.length;
