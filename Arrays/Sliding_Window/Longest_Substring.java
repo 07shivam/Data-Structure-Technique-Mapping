@@ -7,6 +7,7 @@ public class Longest_Substring {
     public int lengthOfLongestSubstring(String s) {
         HashSet<Character> longestSubStringSoFar = new HashSet<>();
 
+
         int i=0, j=0;
         int longestSubStringLength = 0;
         int n = s.length();
