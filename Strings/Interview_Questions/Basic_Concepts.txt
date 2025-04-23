@@ -1,0 +1,3 @@
+1.What are the benefits of string as immutable?
+2.software lifecycle we are using ?
+3.Why I am leaving my current company.
