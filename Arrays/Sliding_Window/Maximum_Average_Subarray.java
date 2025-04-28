@@ -1,7 +1,9 @@
 /*
  Link : https://leetcode.com/problems/maximum-average-subarray-i/submissions/1610447861/
 
- Apporach : 
+ Apporach : Instead of recalculating full sum, adjust it by adding new element and removing old.
+
+
  1.Calcute sum until kth index and assign maxSum;
  2.Calculate maxSum using sliding window, by starting with k+1 index to end of index
  3.Return maxSum/k;

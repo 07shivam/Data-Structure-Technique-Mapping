@@ -1,9 +1,12 @@
 package Arrays.Two_Pointer;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
+/*
+When sum too big, move right to decrease.
+When sum too small, move left to increase.
+ */
 
 public class Two_Sum {
 

@@ -1,0 +1,9 @@
+🎯 Patterns to watch for:
+
+Pattern	Key idea	Example Problems
+Find a pair with a target sum (sorted array)	Start from both ends, move inward.	Two Sum II
+Max/Min of subarray with size K	Maintain window of size K	Max Sum Subarray of Size K
+Longest substring with no repeats	Expand window, shrink when duplicate found	Longest Substring Without Repeating Characters
+Number of substrings with at most K distinct chars	Keep counting inside a dynamic window	Substrings with K Distinct Characters
+Triplets with a given sum	Fix one pointer, move two others	3Sum
+Smallest window that satisfies a condition	Shrink from the left whenever valid	Minimum Window Substring
