@@ -1,4 +1,4 @@
-package Maps;
+package Maps.Sorting;
 
 import java.util.ArrayList;
 import java.util.HashMap;

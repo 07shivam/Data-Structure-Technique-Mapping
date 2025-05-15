@@ -13,15 +13,26 @@ import java.util.Map;
 public class Sort_Characters_By_Frequency {
     public String frequencySort(String s) {
         Map<Character, Integer> frequecyMap = new HashMap<>();
-        for(char ch : s.toCharArray())
-        {
-            frequecyMap.put(ch, frequecyMap.getOrDefault(ch, 0)+1);
+        for (char ch : s.toCharArray()) {
+            frequecyMap.put(ch, frequecyMap.getOrDefault(ch, 0) + 1);
         }
 
         List<Character> keyList = new ArrayList<>(frequecyMap.keySet());
 
-        //sort in descending order of their frequency.
-        keyList.sort((a,b) -> frequecyMap.get(b) - frequecyMap.get(a));
-        
+        // sort in descending order of their frequency.
+        keyList.sort((a, b) -> frequecyMap.get(b) - frequecyMap.get(a));
+
+        String str = "";
+        for (char ch : keyList) {
+            int charFrequency = frequecyMap.get(ch);
+            while (charFrequency > 0) {
+                str += ch;
+                charFrequency--;
+            }
+
+        }
+
+        return str;
+
     }
 }
