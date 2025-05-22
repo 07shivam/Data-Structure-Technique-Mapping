@@ -1,4 +1,4 @@
-package Core;
+package Utility;
 
 public class TreeNode {
     public int val;  

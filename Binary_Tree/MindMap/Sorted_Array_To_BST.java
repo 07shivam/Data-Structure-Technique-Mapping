@@ -7,7 +7,7 @@ Convert Sorted Array to Binary Search Tree
  */
 package Binary_Tree.MindMap;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Sorted_Array_To_BST {
     public static TreeNode sortedArrayToBST(int[] nums) {

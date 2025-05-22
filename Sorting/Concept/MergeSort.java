@@ -35,7 +35,7 @@ merge = 1 6 10 75 99
 
 import java.util.Arrays;
 import java.util.Scanner;
-import Core.PrintHelper;
+import Utility.PrintHelper;
 
 public class MergeSort {
 

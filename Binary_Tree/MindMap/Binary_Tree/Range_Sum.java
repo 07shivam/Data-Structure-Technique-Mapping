@@ -11,7 +11,7 @@ Approach :
  */
 package Binary_Tree.MindMap.Binary_Tree;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Range_Sum {
     public static int rangeSumBST(TreeNode root, int low, int high) {

@@ -98,7 +98,7 @@ Space Complexity: O(h), where h is the height of the tree (due to recursion stac
  */
 package Binary_Tree.MindMap.Binary_Tree;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Binary_Tree_Tilt {
     

@@ -14,7 +14,7 @@
  * }
  */
 
-import Core.TreeNode;
+import Utility.TreeNode;
 import java.util.*;
 
 class Solution {
@@ -44,7 +44,7 @@ class Solution {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         int totalSum = 0;
-        string current = "";
+        String current = "";
 
         while(!queue.isEmpty())
         {

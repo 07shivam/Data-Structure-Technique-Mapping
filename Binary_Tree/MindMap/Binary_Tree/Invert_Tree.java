@@ -3,7 +3,7 @@ package Binary_Tree.MindMap.Binary_Tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Invert_Tree {
     public TreeNode invertTree(TreeNode root) {

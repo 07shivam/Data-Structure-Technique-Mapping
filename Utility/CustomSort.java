@@ -1,4 +1,4 @@
-package Core;
+package Utility;
 
 import Sorting.Technique_Saga.MeetingRoom1;
 

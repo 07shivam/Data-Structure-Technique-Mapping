@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Corner_Nodes {
     public static void printCornerNodes(TreeNode root) {

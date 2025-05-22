@@ -1,0 +1,157 @@
+TECHNIQUE 5
+
+Back Tracking
+
+
+
+Introduction
+
+Imagine you’re exploring a giant maze with multiple paths, twists, and turns. Your goal is to find the exit, but you have no map and don’t know which path is correct. So, you start by picking a direction and walking down a path. Each time you reach a fork, you choose another path and keep going. But if you hit a dead end, you don’t stay stuck—you turn around, retrace your steps back to the last fork, and try a different path. This process of testing, retracing, and trying again is exactly what Backtracking does.
+
+Backtracking is a problem-solving technique where you explore potential solutions, step by step, like moving through the maze. Each path you choose is a possible step towards the solution. If you find that a path leads to a dead end, you backtrack by retracing your steps and choosing a new direction. This way, you avoid wasting time exploring paths that don’t work out, and you focus only on paths that might lead you to the solution.
+
+This approach is great for solving problems that involve:
+
+Finding valid paths in puzzles, such as mazes or route-finding problems,
+
+Building up combinations step by step, like choosing items from a list without knowing the right combination beforehand,
+
+Satisfying constraints like in Sudoku or N-Queens, where only specific placements are allowed.
+
+Backtracking helps you explore all options, but efficiently, as it avoids paths that clearly don’t work. Just like navigating a maze, it’s a way to carefully try all paths until you find the one that leads you to the solution.
+
+Why Learn Backtracking?
+
+Backtracking is one of those clever strategies that balances thoroughness with efficiency—two qualities often at odds in algorithm design. It’s like having a cheat code for exploring huge numbers of possibilities without getting bogged down in endless combinations. Here’s why it’s so essential:
+
+Backtracking systematically explores all possible solutions, making it powerful for problems with a lot of choices, especially when only a few of those choices actually lead to solutions.
+
+For example, consider a puzzle with a hundred potential moves, but only a handful of moves actually bring you closer to the solution. A brute-force approach would naively try every possibility, but Backtracking is smarter. It recognizes dead ends early and skips them, “pruning” branches of the search tree that don’t have solutions. This pruning saves enormous time compared to brute-force approaches and can turn seemingly impossible tasks into feasible ones.
+
+This efficient pruning is what makes Backtracking so useful in practice. Rather than wasting time on paths that don’t work, Backtracking identifies early which paths to abandon, letting you focus on the most promising options. In puzzles or problems like the N-Queens or Sudoku, Backtracking only explores combinations that can eventually lead to solutions, reducing the workload dramatically. Even if a problem’s solution space is exponentially large, Backtracking’s pruning can sometimes make it manageable.
+
+Beyond problem-solving, Backtracking is also a fantastic way to learn recursive thinking. Most Backtracking solutions use recursive function calls, where each call represents a new “level” or “decision” in your solution process. Understanding how Backtracking breaks problems into smaller subproblems, and knowing how to back up when you’re off track, helps you build intuition for recursion and improve in areas like depth-first search, tree traversals, and more.
+
+How to use the Backtracking Approach?
+
+Imagine backtracking as climbing a branching tree to find the sweetest fruit. Each branch is a possible path to follow, and at each split, you have to decide which branch to climb next. When you reach a branch without any fruit, you climb back down and pick a new branch to explore. This “climb up, explore, and retreat” cycle is exactly what backtracking does in problem-solving.
+
+In code, backtracking builds potential solutions step-by-step, checking each choice along the way. Here are the core steps for writing a backtracking solution:
+
+Define the Decision Tree (or State Space): Think of each “decision” in the problem as a branch of the tree. For example, if you’re generating permutations of numbers, each position in the permutation is a decision point, where you choose which number to place next.
+
+Initialize a Function to Explore Solutions: Write a recursive function that represents each step of the “climb” in the tree. This function will:
+
+Add an option to the current solution path.
+
+Check if this partial path could lead to a valid solution.
+
+Check if You’ve Hit a Solution:
+
+In each call, ask if you’ve reached a full solution (like finding the fruit).
+
+If yes, store or print it, then return to explore other options.
+
+Backtrack When a Path Fails:
+
+If a branch doesn’t yield a solution, undo the last choice (“backtrack”) and try the next option. This step is crucial for backtracking: it ensures that you can test each path without being stuck in dead ends.
+
+Explore New Paths: After backtracking, the function tries other options until all possibilities are explored.
+
+
+Example Usage
+
+To see Backtracking in action, let’s take the problem of generating all subsets of a given set of integers.
+For example, given a set like {1, 2, 3}
+All of its subsets would be:
+{1}, {2}, {3}, {1,2}, {1,3}, {2,}, {1,2,3}, {}
+
+
+So, if we look at this problem from the perspective of backtracking we can see that a way to generate a subset is by deciding which elements to include and which to exclude. So we can boil down the creation of a subset to a decision tree where a decision will be made at each element where it should be included or not. We use a recursive approach where we decide, at each step, whether to include the current element in the subset or exclude it, then recursively call the function for the next element.
+
+Steps to Solve Using Backtracking:
+Define a Recursive Function: Start by defining a recursive function that will take the current subset (so far) and the index of the next element to consider.
+
+Add the Current Subset: At each recursive call, the current subset (with the choices made so far) is added to the list of results.
+
+Make a Decision to Include or Exclude the Element:
+
+First, include the current element in the subset and call the function recursively to continue with the next element.
+
+After returning from this recursive call, remove the last element (backtrack) and call the function again to try the case where the current element is not included.
+
+Backtrack to Explore All Combinations: By backtracking, we remove the last decision before moving to the next possibility, ensuring every subset is generated without repeating or skipping any.
+
+
+From the image above you can see how the leafs of the decision tree will be your final output. The reason because it works is simple, you explored every possibility which is either in your set an element will be present or it won’t, thus you have every possible answer.
+
+Below is the code implementation for it.
+
+
+
+function backtrack(subset, index):
+    # Step 2: Add the current subset to results (a complete subset in this branch)
+    results.append(list(subset))
+
+    # Step 3: Loop to include/exclude elements starting from the current index
+    for i in range(index, len(nums)):
+        # Include nums[i] in the current subset
+        subset.append(nums[i])
+
+        # Step 4: Recursively continue to build the subset
+        backtrack(subset, i + 1)
+
+        # Step 5: Backtrack - remove the last element and try next possibility
+        subset.pop()
+
+
+nums = [1, 2, 3]  # Example set of numbers
+results = []  # List to store all subsets
+backtrack([], 0)  # Start with an empty subset and index 0
+print(results)
+
+
+
+Time and Space Complexity
+If you observe the decision tree, you will see that it is exponentially growing, each function is calling two more functions, so the time complexity is exponential. Now talking about the space complexity, you will generate 2^n subsets which will be stored in an array in the above example so that along with the recursion stack will take O(2^n +n).
+Time Complexity : O(2^n)
+Space Complexity : O(2^n +n)
+
+Pruning the search
+
+As of now you might be thinking, well backtracking is the same like brute-force but that is not the case, in many cases it is more efficient than a simple brute force. One of the most powerful features of backtracking is its ability to prune—or cut off—search paths that cannot lead to a valid solution. Pruning saves both time and computational resources by avoiding unnecessary work, making backtracking much more efficient than a brute-force approach. Pruning is the process of discarding search paths that do not satisfy certain conditions or constraints. When you realize a partial solution cannot possibly lead to a valid outcome, you can terminate that branch of the search tree early. By doing so, backtracking avoids exploring every possible path, focusing instead on promising candidates.
+
+
+How to Implement Pruning in Backtracking
+
+To effectively implement pruning, it’s essential to have clear and early termination conditions that identify when a solution path is invalid. Here’s how you can integrate pruning into your backtracking algorithm:
+
+Set Up a Constraint Check: Each time you make a choice (or add an element to the solution path), check if the choice violates any problem constraints. If it does, backtrack immediately.
+
+Define Base Cases Carefully: Identify when a partial solution has met all conditions for validity. Base cases are critical in ensuring that your algorithm stops exploring further once a valid solution (or invalid path) is found.
+
+Apply Heuristic Rules (If Available): Some problems offer heuristic rules that help estimate the viability of a solution path. For example, in a subset sum problem, if the current sum exceeds the target sum, you can immediately prune that branch.
+
+Sort or Preprocess Data for Efficient Pruning: In some cases, sorting your data before applying backtracking can allow you to prune more effectively. For instance, if elements are sorted in ascending order, you can stop searching further when the current element causes the sum to exceed the target.
+
+For example, let’s take the same subset problem that we discussed earlier: suppose instead of generating the subsets the problem was instead to generate only those smaller than sum k. In that case, whenever your decision tree contains elements whose elements are more than sum k we can just discard that tree there itself to save ourselves computation. You will see more in problems section.
+
+Pruning the search
+
+Backtracking is a powerful technique, but it’s not always the most efficient choice. Knowing when to use backtracking can help you optimize your problem-solving approach. Here are the scenarios where backtracking shines and is the go-to technique:
+
+
+When you have a combinatorial problem:
+Backtracking is ideal for problems where you're exploring a space of potential solutions that involve combinations, permutations, or subsets of a set. These problems typically require you to explore all possibilities and check which ones are valid. For example generating subsets, permutations, or combinations (like subset sum or generating all combinations of numbers that add up to a target).
+
+
+When you need to explore all possible solutions:
+Backtracking is great when the problem requires finding all possible solutions (rather than just one), especially when there are multiple valid solutions or when you need to consider alternative possibilities. For example searching for all valid paths in a graph or maze.
+
+
+When constraints can prune large portions of the search space:
+Backtracking is effective when you can easily discard branches of the decision tree that won’t lead to a valid solution. The key strength of backtracking is that it allows you to prune large portions of the search space early, rather than exhaustively exploring all possibilities.
+
+
+When the problem has small or manageable input sizes:
+While backtracking can be powerful, its time complexity can quickly escalate with large input sizes because it explores an exponential number of possibilities. However, for problems with smaller inputs, backtracking can often provide a simple and elegant solution. For a small N-Queens problem or a simple Sudoku grid, backtracking is an intuitive and efficient approach.

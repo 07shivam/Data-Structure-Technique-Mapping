@@ -3,7 +3,7 @@ package Binary_Tree.Technique_Saga;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Check_Cousin {
 

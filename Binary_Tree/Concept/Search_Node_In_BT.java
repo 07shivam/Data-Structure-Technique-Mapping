@@ -8,7 +8,7 @@ Algorithm
 
  */
 package Binary_Tree.Concept;
-import Core.TreeNode;
+import Utility.TreeNode;
 
 
 public class Search_Node_In_BT {

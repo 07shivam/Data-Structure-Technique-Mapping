@@ -30,8 +30,8 @@ function selectionSort(arr):
 O(n^2) Time Complexity. */
 
 import java.util.Scanner;
-import Core.PrintHelper;
-import Core.SwapHelper;
+import Utility.PrintHelper;
+import Utility.SwapHelper;
 
 public class SelectionSort {
     

@@ -13,7 +13,7 @@ If both sides return null, return null (no LCA in this subtree).
  */
 package Binary_Tree.Technique_Saga;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Lowest_Common_Ancestor {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

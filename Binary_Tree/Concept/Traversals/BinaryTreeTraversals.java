@@ -54,7 +54,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class BinaryTreeTraversals {
 

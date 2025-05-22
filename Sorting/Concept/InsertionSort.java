@@ -50,7 +50,7 @@ O(n^2) time complexity
 
 
 import java.util.Scanner;
-import Core.PrintHelper;
+import Utility.PrintHelper;
 
 public class InsertionSort {
 

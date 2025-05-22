@@ -69,7 +69,7 @@ map.get(3) = 3 means there are 3 numbers smaller than 3.
  */
 
 package Sorting.MindMap;
-import Core.PrintHelper;
+import Utility.PrintHelper;
 
  
  public class SmallerNumberUsingQuickSort {

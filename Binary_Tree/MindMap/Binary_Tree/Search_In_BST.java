@@ -1,6 +1,6 @@
 package Binary_Tree.MindMap.Binary_Tree;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Search_In_BST {
     public static TreeNode searchBST(TreeNode root, int val) {

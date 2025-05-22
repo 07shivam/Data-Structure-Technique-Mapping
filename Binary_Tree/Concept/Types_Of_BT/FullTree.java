@@ -7,7 +7,7 @@
 
 package Binary_Tree.Concept.Types_Of_BT;
 import java.util.*;
-import Core.TreeNode; // Correctly importing TreeNode
+import Utility.TreeNode; // Correctly importing TreeNode
 
 public class FullTree {
 

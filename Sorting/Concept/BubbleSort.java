@@ -28,8 +28,9 @@ O(n^2) time complexity
 */
 
 import java.util.Scanner;
-import Core.PrintHelper;
-import Core.SwapHelper;
+
+import Utility.PrintHelper;
+import Utility.SwapHelper;
 
 public class BubbleSort {
 

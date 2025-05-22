@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Search_Max_Min_BT {
 

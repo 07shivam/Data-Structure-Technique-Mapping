@@ -1,6 +1,6 @@
 package Binary_Tree.Technique_Saga;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Check_Sibling {
     public static boolean areSiblings(TreeNode root, int a, int b) {

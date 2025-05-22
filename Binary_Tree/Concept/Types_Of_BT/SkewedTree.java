@@ -10,7 +10,7 @@ package Binary_Tree.Concept.Types_Of_BT;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class SkewedTree {
 

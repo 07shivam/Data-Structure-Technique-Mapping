@@ -20,7 +20,7 @@ package Binary_Tree.Technique_Saga;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import Core.TreeNode;
+import Utility.TreeNode;
 
 public class Sum_Of_LeafNodes_At_MinLevel {
     public static int sumOfLeafNodesAtMinLevel(TreeNode root) {

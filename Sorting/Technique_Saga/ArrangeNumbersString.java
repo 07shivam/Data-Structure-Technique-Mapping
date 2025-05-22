@@ -3,7 +3,7 @@ package Sorting.Technique_Saga;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import Core.PrintHelper;
+import Utility.PrintHelper;
 
 public class ArrangeNumbersString {
     public static int compareStringArray(String m1, String m2) {

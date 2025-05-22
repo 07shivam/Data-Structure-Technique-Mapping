@@ -3,7 +3,7 @@
  */
 
 package Binary_Tree.MindMap.Binary_Tree;
-import Core.TreeNode;
+import Utility.TreeNode;
 import java.util.*;
 
 public class Is_Unival_Tree {
